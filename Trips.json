@@ -1,0 +1,12 @@
+[{
+    "name": "Patagonia Trip (14 day trip)",
+    "description": "wonderful adventure hiking blah, blah, blah",
+    "totalSpots": 30,
+    "picture": "patagonia.jpg"
+},
+{
+    "name": "Rafting Trip (7 day trip)",
+    "description": "wonderful another adventure blah, blah, blah",
+    "totalSpots": 20,
+    "picture": "rafting.png"
+}]

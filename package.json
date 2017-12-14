@@ -1,0 +1,26 @@
+{
+  "name": "catalog-microservices",
+  "version": "1.0.0",
+  "description": "Istio Workshop: Catalog Microservices",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.16.2",
+    "swagger-jsdoc": "^1.9.7",
+    "swagger-ui-express": "^2.0.12"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node catalog.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/redhat-msa-3/catalog-microservices.git"
+  },
+  "author": "developer@redhat.com",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/redhat-msa-3/catalog-microservices/issues"
+  },
+  "homepage": "https://github.com/redhat-msa-3/catalog-microservices#readme"
+}
