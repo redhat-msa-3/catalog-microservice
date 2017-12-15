@@ -18,3 +18,13 @@ Execute catalog locally
 5. The application will be running at the following URL: <http://localhost:8080/catalog>
 6. You can download Trips images from <http://localhost:8080/download/rafting.jpg>
 7. Swagger is available at <http://localhost:8080/api-docs>
+
+
+Execute catalog in OpenShift
+-----------------------------
+
+Make sure that you are logged in.
+
+Execute:
+    oc new-app --name=catalog https://github.com/redhat-msa-3/catalog-microservice
+    
