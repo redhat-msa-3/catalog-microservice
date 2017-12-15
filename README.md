@@ -10,14 +10,18 @@ Execute catalog locally
 
         npm install
 
-3. Type this command to execute the application:
+3. Type this command to test the application:
+
+        npm test
+
+4. Type this command to execute the application:
 
         npm start
 
-4. This will execute `catalog.js` .
-5. The application will be running at the following URL: <http://localhost:8080/catalog>
-6. You can download Trips images from <http://localhost:8080/download/rafting.jpg>
-7. Swagger is available at <http://localhost:8080/api-docs>
+5. This will execute `catalog.js` .
+6. The application will be running at the following URL: <http://localhost:8080/catalog>
+7. You can download Trips images from <http://localhost:8080/download/rafting.jpg>
+8. Swagger is available at <http://localhost:8080/api-docs>
 
 
 Execute catalog in OpenShift
