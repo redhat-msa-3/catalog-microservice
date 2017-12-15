@@ -74,13 +74,12 @@ app.get('/catalog', (req, res, next) => {
 app.get('/download/:pictureName', (req, res, next) => {
     var pic = req.params.pictureName
     res.sendFile(pic, { root: __dirname + '/pictures/'}, (err) => {
-      if (err) res.send('File ' + pic + ' not found')
+      if (err) res.status(404).send('File ' + pic + ' not found')
     })
 })
 
 app.get('/', (req, res) => {
-  res.redirect('/api-docs');
+  res.redirect('/api-docs')
 })
 
-app.listen(8080, () => console.log('Catalog microservice listening on port 8080!'))
-
+module.exports = app.listen(8080, () => console.log('Catalog microservice listening on port 8080!'))

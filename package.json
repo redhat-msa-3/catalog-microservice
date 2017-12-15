@@ -8,9 +8,13 @@
     "swagger-jsdoc": "^1.9.7",
     "swagger-ui-express": "^2.0.12"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^4.0.1",
+    "request": "^2.83.0"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha",
     "start": "node catalog.js"
   },
   "repository": {
