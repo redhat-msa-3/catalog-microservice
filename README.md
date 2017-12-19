@@ -34,5 +34,5 @@ Make sure that you are logged in.
 Execute:
 
     oc new-app --name=catalog https://github.com/redhat-msa-3/catalog-microservice
-    oc set probe dc/catalog --readiness --get-url=http://:8080/api/health
+    oc set probe dc/catalog --readiness --get-url=http://:8080/health
     
