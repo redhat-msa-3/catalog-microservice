@@ -1,6 +1,8 @@
 # catalog-microservice
 Catalog microservice
 
+Build status: [![Build Status](https://travis-ci.org/redhat-msa-3/catalog-microservice.svg?branch=master)](https://travis-ci.org/redhat-msa-3/catalog-microservice)
+
 
 Execute catalog locally
 -----------------------
