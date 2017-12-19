@@ -25,6 +25,7 @@ const swaggerSpec = swaggerJSDoc(options);
 
 // serve swagger
 app.get('/swagger.json', function(req, res) {
+  res.header("Access-")
   res.setHeader('Content-Type', 'application/json');
   res.send(swaggerSpec);
 });
@@ -51,6 +52,7 @@ app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec))
  *         description: catalog list
  */
 app.get('/catalog', (req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "*");
   res.sendFile('Trips.json', { root: __dirname })
 })
 
@@ -73,6 +75,7 @@ app.get('/catalog', (req, res, next) => {
  */
 app.get('/download/:pictureName', (req, res, next) => {
     var pic = req.params.pictureName
+    res.header("Access-Control-Allow-Origin", "*");
     res.sendFile(pic, { root: __dirname + '/pictures/'}, (err) => {
       if (err) res.status(404).send('File ' + pic + ' not found')
     })
