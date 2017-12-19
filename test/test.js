@@ -3,6 +3,14 @@ var request = require('request')
 var server = require('./../catalog.js')
 
 describe('REST endpoints', function() {
+  describe('/health', function() {
+    it('Health endpoint must exist', function(done){
+      request('http://localhost:8080/health' , function(error, response, body) {
+        expect(body).to.equal('I\'m OK')
+        done()
+      })
+    })
+  })
   describe('/catalog', function() {
     it('Catalog must be a JSON array', function(done){
       request('http://localhost:8080/catalog' , function(error, response, body) {

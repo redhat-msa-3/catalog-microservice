@@ -84,6 +84,10 @@ app.get('/download/:pictureName', (req, res, next) => {
     })
 })
 
+app.get('/health', (req, res) => {
+  res.send('I\'m OK')
+})
+
 app.get('/', (req, res) => {
   res.redirect('/api-docs')
 })
