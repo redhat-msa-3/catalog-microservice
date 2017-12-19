@@ -1,5 +1,5 @@
 # catalog-microservice
-Catalog microservice
+Catalog microservice implemented using NodeJS
 
 Build status: [![Build Status](https://travis-ci.org/redhat-msa-3/catalog-microservice.svg?branch=master)](https://travis-ci.org/redhat-msa-3/catalog-microservice)
 
@@ -32,5 +32,7 @@ Execute catalog in OpenShift
 Make sure that you are logged in.
 
 Execute:
+
     oc new-app --name=catalog https://github.com/redhat-msa-3/catalog-microservice
+    oc set probe dc/catalog --readiness --get-url=http://:8080/api/health
     
