@@ -19,6 +19,13 @@ describe('REST endpoints', function() {
         done()
       })
     })
+    it('Catalog must have CORS enabled', function(done){
+      request('http://localhost:8080/catalog' , function(error, response, body) {
+        var ret = response.headers['access-control-allow-origin']
+        expect(ret).to.equal('*');
+        done()
+      })
+    })
   })
   
   describe('/download', function() {

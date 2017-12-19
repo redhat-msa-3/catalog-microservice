@@ -23,6 +23,12 @@ const options = {
 // initialize swagger-jsdoc
 const swaggerSpec = swaggerJSDoc(options);
 
+// Enable CORS
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*');
+  next();
+});
+
 // serve swagger
 app.get('/swagger.json', function(req, res) {
   res.setHeader('Content-Type', 'application/json');
