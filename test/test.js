@@ -1,3 +1,19 @@
+/**
+ * JBoss, Home of Professional Open Source
+ * Copyright 2016, Red Hat, Inc. and/or its affiliates, and individual
+ * contributors by the @authors tag. See the copyright.txt in the
+ * distribution for a full listing of individual contributors.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License")
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * http://www.apache.org/licenses/LICENSE-2.0
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 var expect  = require('chai').expect
 var request = require('request')
 var server = require('./../catalog.js')
@@ -14,7 +30,7 @@ describe('REST endpoints', function() {
   describe('/catalog', function() {
     it('Catalog must be a JSON array', function(done){
       request('http://localhost:8080/catalog' , function(error, response, body) {
-        var ret = JSON.parse(body);
+        var ret = JSON.parse(body)
         expect(ret).to.be.an('array')
         done()
       })
@@ -22,15 +38,15 @@ describe('REST endpoints', function() {
     
     it('Catalog array must have two items', function(done){
       request('http://localhost:8080/catalog' , function(error, response, body) {
-        var ret = JSON.parse(body);
-        expect(ret).to.have.length(2);
+        var ret = JSON.parse(body)
+        expect(ret).to.have.length(2)
         done()
       })
     })
     it('Catalog must have CORS enabled', function(done){
       request('http://localhost:8080/catalog' , function(error, response, body) {
         var ret = response.headers['access-control-allow-origin']
-        expect(ret).to.equal('*');
+        expect(ret).to.equal('*')
         done()
       })
     })
